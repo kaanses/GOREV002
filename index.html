@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Creator</title>
+    <link rel="stylesheet" href="http://localhost:63342/GOREV002/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="left-panel">
+        <div class="left-header">
+            <h1>CV Yap</h1>
+            <p>Saniyeler içerisinde profesyonel CV oluştur</p>
+        </div>
+        <div class="firstRow">
+            <div class="text-area-container">
+            <div>
+                <label class="label" for="name">Birinci İsim:</label>
+                <input type="text" id="name" name="name" class="textAreas" placeholder="İsminiz giriniz"></input>
+            </div>
+            <div>
+                <label class="label" for="middleName">İkinci İsim:</label>
+                <input type="text" id="middleName" name="middleName" class="textAreas" placeholder="İkincil İsminizi giriniz"></input>
+            </div>
+            <div>
+                <label class="label" for="surname">Soyisim:</label>
+                <input type="text" id="surname" name="surname" class="textAreas" placeholder="Soyisminizi giriniz"></input>
+            </div>
+                
+            </div>
+        </div>
+            
+        <div class="secondRow">
+            <div class="text-area-container">
+                <div>
+                <label class="label" for="email">Email:</label>
+                <br>
+                <input type="email" id="email" name="email" class="textAreas" placeholder="Email adresinizi giriniz">
+                </div>
+                <div>
+                    <label class="label" for="phoneNumber">Telefon Numaranız:</label>
+                    <br>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" class="textAreas" placeholder="Telefon numaranızı giriniz">
+                </div>
+                <div>
+                    <label class="label" for="webAdres">Websitenizi Girin:</label>
+                    <br>
+                    <input type="text" id="webAdres" name="webAdres" class="textAreas" placeholder="Websitenizi giriniz">
+                </div>
+            </div>
+        </div>
+        <div class="thirdRow">
+            <div class="text-area-container">
+                <div>
+                    <label class="label" for="adres">Adresiniz:</label>
+                    <br>
+                    <input type="text" id="adres" name="adres" class="textAreaAdres" placeholder="Adresinizi Giriniz:">
+                </div>
+            </div>
+        </div>
+        <br>
+        
+        <div class="fourthRow">
+            <label class="label"> Eğitim </label>
+            <div class="text-area-container">
+                <div>
+                    <label class="subLabel" for="egitimAciklama">Açıklama:</label>
+                    <br>
+                    <input type="text" id="egitimAciklama" name="egitimAciklama" class="textAreaAdres" placeholder="Eğitim bölümünde görünmesini istediğiniz açıklamayı giriniz">
+                </div>
+            </div>
+        </div>
+        <div class="fifthRow">
+            <br>
+            <label class="label"> Okul Ekle</label> <button class="add-button" onclick="addSchoolRow()">+</button>
+        </div>
+        <div id="additionalRows"></div>
+        <div class="sixthRow">
+            <br>
+            <label class="label">Yetenek Ekle</label><button class="add-button" onclick="addSchoolRowYetenek()">+</button>
+        </div>
+        <div id="additionalYetenekRows"></div>
+        <div class="seventhRow">
+            <label class="label">İş Deneyimi</label><button class="add-button" onclick="addWorkExperienceRow()">+</button>
+        </div>
+        <div id="additionalWorkExperienceRows"></div>
+        <br>
+        <div class="eightrow">
+            <label class="label"> Hakkımda: </label>
+            <div class="text-area-container">
+                    <input type="text" id="hakkimda" name="hakkimda" class="textAreaHakkimda" placeholder="Hakkınızda bir şeyler yazın">
+            </div>
+        </div>
+        <div class="leftFooter">
+            <p>CV Yap v1.0</p>
+            <p>© 2024 Kaan Ses. Bütün hakları saklıdır.</p>
+        </div>
+    </div>
+    <div class="right-panel">
+        <header class="right-panel-header">
+            <h2 class="temasec">Tema Seç</h2>
+            <div class="theme-choice">
+                <div onclick="selectTheme(1)">Theme 1</div>
+                <div onclick="selectTheme(2)">Theme 2</div>
+                <div onclick="selectTheme(3)">Theme 3</div>
+                <div onclick="selectTheme(4)">Theme 4</div>
+            </div>
+        </header>
+        <div id="cv-preview">
+        </div>
+    </div>
+    <div class="footer">
+        <div onclick="toggleMenu(1)">Arkaplan Rengi</div>
+        <div onclick="toggleMenu(2)">Başlık Rengi</div>
+        <div onclick="toggleMenu(3)">İletişim Rengi</div>
+        <div onclick="toggleMenu(4)">İsim&nbsp; Rengi</div>
+        <div onclick="toggleMenu(5)">Font&nbsp;&nbsp;&nbsp;&nbsp; Tipi</div>
+        <div onclick="toggleMenu(6)">Fotoğraf Şekli</div>
+        <div onclick="toggleMenu(7)">Çizgi Rengi</div>
+        <div onclick="toggleMenu(8)">Çizgi Şekli</div>
+    </div>
+
+    <div id="expandedMenu1" class="expanded-menu">
+    </div>
+    <div id="expandedMenu2" class="expanded-menu">
+    </div>
+    <div id="expandedMenu3" class="expanded-menu">
+    </div>
+    <div id="expandedMenu4" class="expanded-menu">
+    </div>
+    <div id="expandedMenu5" class="expanded-menu">
+    </div>
+    <div id="expandedMenu6" class="expanded-menu">
+    </div>
+    <div id="expandedMenu7" class="expanded-menu">
+    
+    </div>
+    <div id="expandedMenu8" class="expanded-menu">
+        
+    </div>
+</div>
+<script src="http://localhost:63342/GOREV002/script.js"></script>
+</body>
+</html>
